@@ -1,0 +1,72 @@
+import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+
+function WebSite() {
+  return (
+    <div className='app-container'>
+      {/* WIX Content */}
+      
+    <svg data-dom-store="true" style={{display: 'none'}}>
+        <defs id="dom-store-defs"></defs>
+    </svg>
+    <div id="SITE_CONTAINER">
+        <div id="main_MF" className="main_MF">
+            <div id="SCROLL_TO_TOP" className="Vd6aQZ ignore-focus SCROLL_TO_TOP" role="region" tabIndex="-1"
+                aria-label="top of page"><span className="mHZSwn">top of page</span></div>
+            <div id="BACKGROUND_GROUP" className="backgroundGroup_tuckg BACKGROUND_GROUP">
+                <div id="BACKGROUND_GROUP_TRANSITION_GROUP">
+                    <div id="pageBackground_tuckg" data-media-height-override-type=""
+                        data-media-position-override="false" className="pageBackground_tuckg BmZ5pC">
+                        <div id="bgLayers_pageBackground_tuckg" data-hook="bgLayers"
+                            data-motion-part="BG_LAYER pageBackground_tuckg" className="MW5IWV">
+                            <div data-testid="colorUnderlay" className="LWbAav Kv1aVt"></div>
+                            <div id="bgMedia_pageBackground_tuckg" data-motion-part="BG_MEDIA pageBackground_tuckg"
+                                className="VgO9Yg"><wix-bg-image id="bgImg_pageBackground_tuckg"
+                                    className="Kv1aVt dLPlxY mNGsUM bgImage"
+                                    data-tiled-image-info="{}"
+                                    data-has-bg-scroll-effect="" data-bg-effect-name=""
+                                    data-motion-part="BG_IMG pageBackground_tuckg"></wix-bg-image></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="site-root" className="site-root">
+                <div id="masterPage" className="mesh-layout masterPage css-editing-scope">
+                    <Header />
+                    <Main />
+                    <Footer />
+                </div>
+            </div>
+            <div id="SCROLL_TO_BOTTOM" className="Vd6aQZ ignore-focus SCROLL_TO_BOTTOM" role="region" tabIndex="-1"
+                aria-label="bottom of page"><span className="mHZSwn">bottom of page</span></div>
+        </div>
+    </div>
+    <link
+        href="https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%7D&beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.VerticalMenu_uiType_NativeMapper%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dom_store%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.imageEncodingAVIF%2C.isClassNameToRootEnabled%2C.motionTimeAnimationsCSS%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.removeDynamicModelTopologyFromSiteAssets%2C.shouldUseResponsiveImages%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&deviceType=Desktop&dfCk=6&dfVersion=1.5295.0&disableStaticPagesUrlHierarchy=false&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.deboraclz.com&fileId=c30a77c9.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isMultilingualEnabled=false&isPremiumDomain=true&isTrackClicksAnalyticsEnabled=false&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=false&language=pt&languageResolutionMethod=QueryParam&metaSiteId=b4353691-57e1-47a3-8d55-e5a620caecd4&module=thunderbolt-features&oneDocEnabled=true&originalLanguage=pt&pageId=4ad778_1566c12f5ec7d5779bb1206fd14d12c4_79.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14949.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14949.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=c95c40e0-5d79-4cd5-a43a-b5e3f6655546&siteRevision=79&staticHTMLComponentUrl=https%3A%2F%2Fwww-deboraclz-com.filesusr.com%2F&useSandboxInHTMLComp=false&viewMode=desktop"
+        id="features_masterPage" as="fetch" position="post-scripts" rel="preload" crossOrigin="anonymous" />
+    <link
+        href="https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%7D&beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.VerticalMenu_uiType_NativeMapper%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dom_store%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.imageEncodingAVIF%2C.isClassNameToRootEnabled%2C.motionTimeAnimationsCSS%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.removeDynamicModelTopologyFromSiteAssets%2C.shouldUseResponsiveImages%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&deviceType=Desktop&dfCk=6&dfVersion=1.5295.0&disableStaticPagesUrlHierarchy=false&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.deboraclz.com&fileId=c30a77c9.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isMultilingualEnabled=false&isPremiumDomain=true&isTrackClicksAnalyticsEnabled=false&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=false&language=pt&languageResolutionMethod=QueryParam&metaSiteId=b4353691-57e1-47a3-8d55-e5a620caecd4&module=thunderbolt-features&oneDocEnabled=true&originalLanguage=pt&pageId=4ad778_26578843e5dc4de473047922ce85ae36_79.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14949.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14949.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=c95c40e0-5d79-4cd5-a43a-b5e3f6655546&siteRevision=79&staticHTMLComponentUrl=https%3A%2F%2Fwww-deboraclz-com.filesusr.com%2F&useSandboxInHTMLComp=false&viewMode=desktop"
+        id="features_tuckg" as="fetch" position="post-scripts" rel="preload" crossOrigin="anonymous" />
+    <link
+        href="https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5295.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.deboraclz.com&fileId=d4d2613d.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=false&language=pt&metaSiteId=b4353691-57e1-47a3-8d55-e5a620caecd4&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=pt&pageId=4ad778_1566c12f5ec7d5779bb1206fd14d12c4_79.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14949.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14949.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=c95c40e0-5d79-4cd5-a43a-b5e3f6655546&siteRevision=79&staticHTMLComponentUrl=https%3A%2F%2Fwww-deboraclz-com.filesusr.com%2F&viewMode=desktop"
+        id="platform_masterPage" as="fetch" position="post-scripts" rel="preload" crossOrigin="anonymous" />
+    <link
+        href="https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5295.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.deboraclz.com&fileId=d4d2613d.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=false&language=pt&metaSiteId=b4353691-57e1-47a3-8d55-e5a620caecd4&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=pt&pageId=4ad778_26578843e5dc4de473047922ce85ae36_79.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14949.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14949.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=c95c40e0-5d79-4cd5-a43a-b5e3f6655546&siteRevision=79&staticHTMLComponentUrl=https%3A%2F%2Fwww-deboraclz-com.filesusr.com%2F&viewMode=desktop"
+        id="platform_tuckg" as="fetch" position="post-scripts" rel="preload" crossOrigin="anonymous" />
+        
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<WebSite />} />
+      </Routes>
+    </Router>
+  );
+}
