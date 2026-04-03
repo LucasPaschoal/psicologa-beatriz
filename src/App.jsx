@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
@@ -8,7 +7,7 @@ function WebSite() {
   return (
     <div className='app-container'>
       {/* WIX Content */}
-      
+
     <svg data-dom-store="true" style={{display: 'none'}}>
         <defs id="dom-store-defs"></defs>
     </svg>
@@ -56,17 +55,11 @@ function WebSite() {
     <link
         href="https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5295.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.deboraclz.com&fileId=d4d2613d.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=false&language=pt&metaSiteId=b4353691-57e1-47a3-8d55-e5a620caecd4&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=pt&pageId=4ad778_26578843e5dc4de473047922ce85ae36_79.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14949.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14949.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=c95c40e0-5d79-4cd5-a43a-b5e3f6655546&siteRevision=79&staticHTMLComponentUrl=https%3A%2F%2Fwww-deboraclz-com.filesusr.com%2F&viewMode=desktop"
         id="platform_tuckg" as="fetch" position="post-scripts" rel="preload" crossOrigin="anonymous" />
-        
+
     </div>
   );
 }
 
 export default function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<WebSite />} />
-      </Routes>
-    </Router>
-  );
+  return <WebSite />;
 }
