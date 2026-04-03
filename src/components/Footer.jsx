@@ -25,6 +25,8 @@ export default function Footer() {
               <img 
                 src={instagramIcon} 
                 alt="Instagram" 
+                loading="lazy"
+                decoding="async"
               />
             </a>
           </li>
@@ -38,6 +40,8 @@ export default function Footer() {
               <img 
                 src={whatsappIcon} 
                 alt="Whatsapp" 
+                loading="lazy"
+                decoding="async"
               />
             </a>
           </li>

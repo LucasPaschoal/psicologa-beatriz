@@ -1,116 +1,37 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import instagramIcon from '../assets/img/icon-instagram.png';
 import whatsappIcon from '../assets/img/icon-whatsapp.png';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeMenu, setActiveMenu] = useState('inicio');
-    const pendingSectionIdRef = useRef(null);
-    const delayedScrollTimeoutRef = useRef(null);
-
-    const unlockPotentialScrollLocks = () => {
-        document.body.classList.remove('blockSiteScrolling', 'siteScrollingBlocked', 'siteScrollingBlockedIOSFix');
+    const sectionToMenuKey = {
+        SCROLL_TO_TOP: 'inicio',
+        'comp-mkd2xqhe': 'sobre-mim',
+        'comp-mkmmm2v8': 'servicos',
+        'faq-titulo': 'faq',
+        'comp-mkohii2m': 'contato',
     };
-
-    const findScrollableAncestor = (element) => {
-        let current = element?.parentElement;
-
-        while (current && current !== document.body) {
-            const style = window.getComputedStyle(current);
-            const canScrollY = /(auto|scroll)/.test(style.overflowY);
-            if (canScrollY && current.scrollHeight > current.clientHeight + 4) {
-                return current;
-            }
-            current = current.parentElement;
-        }
-
-        return document.scrollingElement || document.documentElement;
-    };
-
-    const compensateHeaderOffset = (sectionEl) => {
-        const headerEl = document.getElementById('SITE_HEADER');
-        const headerOffset = (headerEl ? headerEl.offsetHeight : 0) + 8;
-        const scrollableAncestor = findScrollableAncestor(sectionEl);
-
-        if (
-            scrollableAncestor === document.documentElement ||
-            scrollableAncestor === document.body ||
-            scrollableAncestor === document.scrollingElement
-        ) {
-            window.scrollBy({ top: -headerOffset, behavior: 'auto' });
-            return;
-        }
-
-        scrollableAncestor.scrollBy({ top: -headerOffset, behavior: 'auto' });
-    };
-
-    const scrollToSection = useCallback((sectionId) => {
-        unlockPotentialScrollLocks();
-
-        if (sectionId === 'SCROLL_TO_TOP') {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            const rootScroller = document.scrollingElement || document.documentElement;
-            rootScroller.scrollTop = 0;
-            return;
-        }
-
-        const sectionEl = document.getElementById(sectionId);
-        if (!sectionEl) return;
-
-        sectionEl.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-        window.setTimeout(() => compensateHeaderOffset(sectionEl), 0);
-        window.setTimeout(() => compensateHeaderOffset(sectionEl), 220);
-    }, []);
-
-    const scrollWithRetry = useCallback((sectionId) => {
-        scrollToSection(sectionId);
-
-        if (delayedScrollTimeoutRef.current) {
-            window.clearTimeout(delayedScrollTimeoutRef.current);
-        }
-
-        delayedScrollTimeoutRef.current = window.setTimeout(() => {
-            scrollToSection(sectionId);
-        }, 180);
-    }, [scrollToSection]);
 
     useEffect(() => {
-        if (isMenuOpen || !pendingSectionIdRef.current) return;
-
-        const sectionId = pendingSectionIdRef.current;
-        pendingSectionIdRef.current = null;
-
-        let rafId = 0;
-        rafId = window.requestAnimationFrame(() => {
-            scrollWithRetry(sectionId);
-        });
-
-        return () => {
-            if (rafId) {
-                window.cancelAnimationFrame(rafId);
-            }
+        const syncActiveMenuWithHash = () => {
+            const sectionId = window.location.hash.replace(/^#/, '') || 'SCROLL_TO_TOP';
+            setActiveMenu(sectionToMenuKey[sectionId] || 'inicio');
         };
-    }, [isMenuOpen, scrollWithRetry]);
 
-    useEffect(() => {
+        syncActiveMenuWithHash();
+        window.addEventListener('hashchange', syncActiveMenuWithHash);
+
         return () => {
-            if (delayedScrollTimeoutRef.current) {
-                window.clearTimeout(delayedScrollTimeoutRef.current);
-            }
+            window.removeEventListener('hashchange', syncActiveMenuWithHash);
         };
     }, []);
 
-    const handleMenuSelect = (event, item, sectionId) => {
-        event.preventDefault();
+    const handleMenuSelect = (_event, item) => {
         setActiveMenu(item);
-
         if (isMenuOpen) {
-            pendingSectionIdRef.current = sectionId;
             setIsMenuOpen(false);
-            return;
         }
-
-        scrollWithRetry(sectionId);
     };
 
   return (
@@ -178,7 +99,7 @@ export default function Header() {
                                                     data-is-current={activeMenu === 'inicio'} aria-current={activeMenu === 'inicio' ? 'true' : 'false'}>
                                                     <div className="itemShared2352141355__rootContainer"><a
                                                             data-item-label="true" data-testid="linkElement"
-                                                            href="#SCROLL_TO_TOP" onClick={(event) => handleMenuSelect(event, 'inicio', 'SCROLL_TO_TOP')} target="_self"
+                                                            href="#SCROLL_TO_TOP" onClick={(event) => handleMenuSelect(event, 'inicio')} target="_self"
                                                         className={`itemDepth02233374943__root ${activeMenu === 'inicio' ? 'itemDepth02233374943--isCurrentPage' : ''} StylableHorizontalMenu3372578893__menuItem itemShared2352141355__menuItem`}
                                                             tabIndex="0">
                                                             <div className="itemDepth02233374943__container"><span
@@ -192,7 +113,7 @@ export default function Header() {
                                                     <div className="itemShared2352141355__rootContainer"><a
                                                             data-item-label="true" data-testid="linkElement"
                                                             data-anchor="anchors-mko9ti3z3"
-                                                        href="#comp-mko9ti321" target="_self" onClick={(event) => handleMenuSelect(event, 'sobre-mim', 'comp-mko9ti321')}
+                                                        href="#comp-mkd2xqhe" target="_self" onClick={(event) => handleMenuSelect(event, 'sobre-mim')}
                                                             className={`itemDepth02233374943__root ${activeMenu === 'sobre-mim' ? 'itemDepth02233374943--isCurrentPage' : ''} StylableHorizontalMenu3372578893__menuItem itemShared2352141355__menuItem`}
                                                             tabIndex="0">
                                                             <div className="itemDepth02233374943__container"><span
@@ -206,7 +127,7 @@ export default function Header() {
                                                     <div className="itemShared2352141355__rootContainer"><a
                                                             data-item-label="true" data-testid="linkElement"
                                                             data-anchor="anchors-mko9ti423"
-                                                                        href="#comp-mko9ti322" target="_self" onClick={(event) => handleMenuSelect(event, 'servicos', 'comp-mko9ti322')}
+                                                                        href="#comp-mkmmm2v8" target="_self" onClick={(event) => handleMenuSelect(event, 'servicos')}
                                                         className={`itemDepth02233374943__root ${activeMenu === 'servicos' ? 'itemDepth02233374943--isCurrentPage' : ''} StylableHorizontalMenu3372578893__menuItem itemShared2352141355__menuItem`}
                                                             tabIndex="0">
                                                             <div className="itemDepth02233374943__container"><span
@@ -219,7 +140,7 @@ export default function Header() {
                                                     data-is-current={activeMenu === 'faq'} aria-current={activeMenu === 'faq' ? 'true' : 'false'}>
                                                     <div className="itemShared2352141355__rootContainer"><a
                                                         data-item-label="true" data-testid="linkElement"
-                                                        href="#comp-mko9ti331" target="_self" onClick={(event) => handleMenuSelect(event, 'faq', 'comp-mko9ti331')}
+                                                        href="#faq-titulo" target="_self" onClick={(event) => handleMenuSelect(event, 'faq')}
                                                         className={`itemDepth02233374943__root ${activeMenu === 'faq' ? 'itemDepth02233374943--isCurrentPage' : ''} StylableHorizontalMenu3372578893__menuItem itemShared2352141355__menuItem`}
                                                         tabIndex="0">
                                                         <div className="itemDepth02233374943__container"><span
@@ -234,7 +155,7 @@ export default function Header() {
                                                     <div className="itemShared2352141355__rootContainer"><a
                                                             data-item-label="true" data-testid="linkElement"
                                                             data-anchor="anchors-mkog555i2"
-                                                        href="#comp-mkohii2m" target="_self" onClick={(event) => handleMenuSelect(event, 'contato', 'comp-mkohii2m')}
+                                                        href="#comp-mkohii2m" target="_self" onClick={(event) => handleMenuSelect(event, 'contato')}
                                                             className={`itemDepth02233374943__root ${activeMenu === 'contato' ? 'itemDepth02233374943--isCurrentPage' : ''} StylableHorizontalMenu3372578893__menuItem itemShared2352141355__menuItem`}
                                                             tabIndex="0">
                                                             <div className="itemDepth02233374943__container"><span
@@ -252,6 +173,8 @@ export default function Header() {
                                                     href="https://www.instagram.com/psi.beatrizspimentel" target="_blank"
                                                     rel="noreferrer noopener" className="oRtuWN" aria-label="Instagram"><img
                                                         sizes="31px"
+                                                        loading="lazy"
+                                                        decoding="async"
                                                         srcSet={`${instagramIcon} 1x, ${instagramIcon} 2x`}
                                                         id="img_0_comp-mk70ydh3"
                                                         src={instagramIcon}
@@ -261,6 +184,8 @@ export default function Header() {
                                                     data-testid="linkElement" href="https://wa.me/5522997466590"
                                                     target="_blank" rel="noreferrer noopener" className="oRtuWN"
                                                     aria-label="Whatsapp"><img sizes="31px"
+                                                        loading="lazy"
+                                                        decoding="async"
                                                         srcSet={`${whatsappIcon} 1x, ${whatsappIcon} 2x`}
                                                         id="img_1_comp-mk70ydh3"
                                                         src={whatsappIcon}
