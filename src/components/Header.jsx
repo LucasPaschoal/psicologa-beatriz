@@ -54,7 +54,7 @@ export default function Header() {
                                         data-testid="richTextElement">
                                         <h2 className="font_2 wixui-rich-text__text"
                                             style={{fontSize: '23px', lineHeight: 'normal'}}><a
-                                                href="https://www.beatrizpimentel.com" target="_self"
+                                                href="#SCROLL_TO_TOP" target="_self"
                                                 className="wixui-rich-text__text"><span style={{fontSize: '23px'}}
                                                     className="wixui-rich-text__text"><span
                                                         className="color_15 wixui-rich-text__text"><span
@@ -69,8 +69,8 @@ export default function Header() {
                                         className="ku3DBC zQ9jDz qvSjx3 Vq6kJx comp-mk6y1fqh wixui-rich-text"
                                         data-testid="richTextElement">
                                         <p className="font_9 wixui-rich-text__text" style={{fontSize: '14px'}}><a
-                                                href="https://www.beatrizpimentel.com" target="_self"
-                                                className="wixui-rich-text__text"><span style={{fontWeight: '200'}}
+                                            href="#SCROLL_TO_TOP" target="_self"
+                                            className="wixui-rich-text__text"><span style={{fontWeight: '200'}}
                                                     className="wixui-rich-text__text"><span
                                                         style={{fontFamily: 'bitter-v2,serif'}}
                                                         className="wixui-rich-text__text">Psic&oacute;loga CRP 05/85932</span></span></a></p>

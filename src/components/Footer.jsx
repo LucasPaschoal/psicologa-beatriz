@@ -8,7 +8,7 @@ export default function Footer() {
     <footer id="SITE_FOOTER" className="footer-container">
       <div className="footer-content">
         
-        <a href="https://www.beatrizpimentel.com" className="footer-logo">
+        <a href="#SCROLL_TO_TOP" className="footer-logo">
           <h2 className="footer-name">Beatriz Pimentel</h2>
           <p className="footer-title">Psicóloga CRP 05/85932</p>
           <p className="footer-subtitle">Atendimento online</p>
