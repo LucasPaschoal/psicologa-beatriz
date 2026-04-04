@@ -11,7 +11,7 @@ main = main.replace(/href="https:\/\/wa.me\/5522997466590" target="_blank" rel="
 main = main.replace(/href="https:\/\/wa.me\/5522997466590"\s+target="_blank"\s+rel="noreferrer noopener"( [^>]*)aria-label="Entre em contato"/g, 'href="#" onClick={(e) => { e.preventDefault(); openModal(); }}$1aria-label="Entre em contato"');
 
 // Replace Button: Atendimento online
-main = main.replace(/href="https:\/\/www.beatrizpimentel.com"\s+target="_self"( [^>]*)aria-label="Atendimento online"/g, 'href="#" onClick={(e) => { e.preventDefault(); openModal(); }}$1aria-label="Atendimento online"');
+main = main.replace(/href="[^"]*"\s+target="_self"( [^>]*)aria-label="Atendimento online"/g, 'href="#" onClick={(e) => { e.preventDefault(); openModal(); }}$1aria-label="Atendimento online"');
 
 // Replace Button: Agende o seu horário
 main = main.replace(/href="https:\/\/wa.me\/5522997466590"\s+target="_blank"\s+rel="noreferrer noopener"( [^>]*)aria-label="Agende o seu horário"/g, 'href="#" onClick={(e) => { e.preventDefault(); openModal(); }}$1aria-label="Agende o seu horário"');
